@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    body {
+      background-color: lightgoldenrodyellow;
+    }
+  </style>
+
+<body>
+  <title>Diagon Alley</title>
+  <h1>Welcome to Diagon Alley!</h1>
+  <div style="background-color: rgb(231, 219, 149);">
+    <p> Here you can find many wonders that suit you!<br>
+      Whether its your hogwarts house, your type of wand, or your patronus<br>
+      You can find ANYTHING here!</p>
+  </div>
+  <input type="text" id="aaa" value="Type here to add your own spell" />
+  <div id="container"></div>
+  <br />
+  <input type="button" id="spell" value="Add Spell" onclick="addItem();" />
+  <br>
+  <div id="list"></div>
+
+
+  <script>
+    function addItem() {
+      // debugger;
+      var newItem = document.createElement("div");
+
+      var aaa = document.getElementById("aaa");
+      var bbb = aaa.value;
+
+      newItem.innerHTML = bbb
+      document.getElementById("list").appendChild(newItem)
+    }
+  </script>
+</body>
+</head>
+
+</html>

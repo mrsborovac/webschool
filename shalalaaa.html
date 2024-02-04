@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+    <title>Harry Potter Club</title>
+    <div style="background-color: rgb(72, 99, 121);">
+        <h1>Harry Potter Fan Club</h1>
+        <p>Hey there!Are you a Harry Potter fan who finished reading the books, AND watching the movies?<br> Want to
+            have fun with some Harry potter games, quizzes and more?</p>
+        <p>If so, here are some to get you started.<br>But first, you'll need to enter the incantation to make
+            things levitate to
+            prove you are a wizard/witch.</p>
+        <h2>Incantation</h2>
+        <p>Type it here:<input id="passwordBox" type="password" /> </p>
+    </div>
+    <script>
+        function checkPassword() {
+            // debugger;
+            var incantation = ("Wingardium Leviosa");
+            var passwordText = document.getElementById("passwordBox").value;
+            // var passwordText2 = passwordText.value;
+
+            // console.log(incantation + " " + passwordText);
+
+            if (passwordText != incantation) {
+                alert("Access denied! You're a Muggle!");
+                console.log("Access denied! You're a Muggle!");
+                return false;
+            } else {
+                return true;
+            }
+        }
+    </script>
+    <a href="http://127.0.0.1:5500/Untitled.html" onclick="return checkPassword();"> Click here to confirm your answer
+        and head
+        to Diagon
+        Alley.</a>
+</body>
+
+</html>

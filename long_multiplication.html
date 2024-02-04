@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: lightgoldenrodyellow;
+        }
+    </style>
+
+<body>
+    <title>calculator</title>
+    <h1>Welcome to Maris' calculator!</h1>
+    <div style="background-color: rgb(255, 0, 0);">
+        <p> Use this web to calculate long multiplication!</p>
+    </div>
+    <input type="text" id="aaa" value="Number 1" />
+    <input type="text" id="ccc" value="Number 2" />
+    <div id="container"></div>
+    <br />
+    <input type="button" id="spell" value="Calculate" onclick="addItem();" />
+    <div id="list"></div>
+
+
+    <!-- division -->
+    <div style="background-color: rgb(255, 217, 0);">
+        <p> Use this web to calculate long division!</p>
+    </div>
+
+    bigger: <input type="text" id="eee" value="" />
+    smaller:<input type="text" id="fff" value="" />
+    <div id="container"></div>
+    <br />
+    <input type="button" id="spell" value="Calculate" onclick="divide();" />
+    <div id="list"></div>
+    <div style="background-color: rgb(0, 60, 255);">
+        <p> Use this web to calculate subtraction!</p>
+    </div>
+    bigger: <input type="text" id="ggg" value="" />
+    smaller:<input type="text" id="hhh" value="" />
+    <div id="container"></div>
+    <br />
+    <input type="button" id="spell" value="Calculate" onclick="subtraction();" />
+    <div id="list"></div>
+    <div style="background-color: rgb(0, 255, 0);">
+        <p> Use this web to calculate addition!</p>
+    </div>
+
+    <!-- addition -->
+    bigger: <input type="text" id="iii" value="" />
+    smaller:<input type="text" id="jjj" value="" />
+
+    <div id="container"></div>
+    <br />
+
+    <input type="button" id="add" value="Calculate" onclick="addition();" />
+    <div id="list"></div>
+
+
+    <script>
+        function addItem() {
+            // debugger;
+            var newItem = document.createElement("div");
+
+            // get the first value
+            var aaa = document.getElementById("aaa");
+            var bbb = aaa.value;
+
+            // get the second value
+            var ccc = document.getElementById("ccc");
+            var ddd = ccc.value;
+
+            var result = parseFloat(bbb) * parseFloat(ddd)
+
+            newItem.innerHTML = result
+            document.getElementById("list").appendChild(newItem)
+        }
+        function divide() {
+            // debugger;
+            var newItem = document.createElement("div");
+
+            // get the first value
+            var aaa = document.getElementById("eee");
+            var bbb = aaa.value;
+
+            // get the second value
+            var ccc = document.getElementById("fff");
+            var ddd = ccc.value;
+
+            var result = parseFloat(bbb) / parseFloat(ddd)
+
+            newItem.innerHTML = result
+            document.getElementById("list").appendChild(newItem)
+        }
+        function subtraction() {
+            // debugger;
+            var newItem = document.createElement("div");
+
+            // get the first value
+            var aaa = document.getElementById("ggg");
+            var bbb = aaa.value;
+
+            // get the second value
+            var ccc = document.getElementById("hhh");
+            var ddd = ccc.value;
+
+            var result = parseFloat(bbb) - parseFloat(ddd)
+
+            newItem.innerHTML = result
+            document.getElementById("list").appendChild(newItem)
+        }
+        function addition() {
+            // debugger;
+            var newItem = document.createElement("div");
+
+            // get the first value
+            var aaa = document.getElementById("iii");
+            var bbb = aaa.value;
+
+            // get the second value
+            var ccc = document.getElementById("jjj");
+            var ddd = ccc.value;
+
+            var result = parseFloat(bbb) + parseFloat(ddd)
+
+            newItem.innerHTML = result
+            document.getElementById("list").appendChild(newItem)
+        }
+    </script>
+</body>
+</head>
+
+</html>
